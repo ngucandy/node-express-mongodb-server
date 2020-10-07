@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(async (req, res, next) => {
   req.context = {
     models,
-    me: await models.User.findByLogin('rwieruch'),
+    me: await models.User.findByLogin('anguyen'),
   };
   next();
 });
@@ -62,11 +62,11 @@ connectDb().then(async () => {
 
 const createUsersWithMessages = async () => {
   const user1 = new models.User({
-    username: 'rwieruch',
+    username: 'anguyen',
   });
 
   const user2 = new models.User({
-    username: 'ddavids',
+    username: 'rghandi',
   });
 
   const message1 = new models.Message({
