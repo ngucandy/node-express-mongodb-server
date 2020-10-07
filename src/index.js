@@ -34,6 +34,11 @@ app.use('/session', routes.session);
 app.use('/users', routes.user);
 app.use('/messages', routes.message);
 
+// * Status * //
+app.get('/v1', (req, res) => {
+  res.send('OK');
+});
+
 // * Start * //
 
 const eraseDatabaseOnSync = true;
